@@ -1,0 +1,83 @@
+# Exercicios de Python :snake:
+
+- Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com a sua idade, se ele ainda vai se alistar ao serviço militar.
+
+  ```
+  from datetime import date
+  print('=-' * 10)
+  print('ALISTAMENTO MILITAR')
+  print('=-' * 10)
+  atual = date.today().year
+  nasc = int(input('ANO DE NASCIMENTO: '))
+  idade = atual - nasc
+  print('Quem nasceu em {} tem {} ano em {}.'.format(nasc, idade, atual))
+  if idade == 18:
+      print('Você  tem que se alistar IMEDIATAMENTE!')
+  elif idade < 18:
+      saldo = 18 - idade
+      ano = atual + saldo
+      print('Ainda falta {} anos para o alistamento '.format(saldo))
+      print('Seu alistamento será em {}'.format(ano))
+  elif idade > 18:
+      saldo = idade - 18
+      anos = atual - saldo
+      print('Você já deveria ter se alistado há {} anos .'.format(saldo))
+      print('Seu alistamento foi em {}'.format(anos))
+  ```
+
+- Crie um jogo em Python usando um import, estrutura condicionais.
+
+​     
+
+   
+
+```
+from random import randint
+from time import sleep
+itens = ('PEDRA',' PAPEL', 'TESOURA')
+
+computador = randint(0, 2)
+print('''Suas Opçôes:
+[ 0 ] PEDRA
+[ 1 ] PAPEL
+[ 2 ] TESOURA''')
+jogador = int(input('Qual é sua jogada? '))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!')
+sleep(1)
+print('-=' * 12)
+print('Computador jogou {} '.format(itens[computador]))
+print('Jogador jogou {} '.format(itens[jogador]))
+print('-=' * 12)
+
+if computador == 0:
+    if jogador == 0:
+        print("EMPATOU")
+    elif jogador == 1:
+        print('Jogador VENCEU')
+    elif jogador == 2:
+        print('Computador VENCEU')
+    else:
+        print('OPÇÃO INVALIDA')
+elif computador == 1:
+    if jogador == 0:
+        print('Computador VENCEU')
+    elif jogador == 1:
+        print('EMPATOU')
+    elif jogador == 2:
+        print('Jogador VENCEU')
+    else:
+        print('OPÇÃO INVALIDA')
+elif computador == 2:
+    if jogador == 0:
+        print('Jogador VENCEU')
+    elif jogador == 1:
+        print('Computador VENCEU')
+    elif jogador == 2:
+        print('EMPATOU')
+    else:
+        print('OPÇÃO INVALIDA')
+```
